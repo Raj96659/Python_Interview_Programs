@@ -1,0 +1,12 @@
+Q. Write a python program to reverse a string.
+
+def reverse_string(input_string):
+    # Reverse the string using slicing
+    return input_string[::-1]
+
+# Input from the user
+user_input = input("Enter a string to reverse: ")
+
+# Call the function and display the reversed string
+reversed_string = reverse_string(user_input)
+print("Reversed string:", reversed_string)
