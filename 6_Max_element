@@ -1,0 +1,18 @@
+# Program to find the maximum element in a list (user-defined way)
+
+# Input: Get a list of numbers from the user
+numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+
+# Check if the list is empty
+if not numbers:
+    print("The list is empty. Please enter some numbers.")
+else:
+    # Initialize the first element as the maximum
+    max_element = numbers[0]
+
+    # Iterate through the list to find the maximum
+    for num in numbers:
+        if num > max_element:
+            max_element = num
+
+    print(f"The maximum element in the list is: {max_element}")
