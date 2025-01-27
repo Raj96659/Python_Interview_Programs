@@ -1,0 +1,23 @@
+# def factorial(n):
+#     if n==0:
+#         return 1
+#     else:
+#         return n*factorial(n-1)
+#
+# number =5
+# result = factorial(number)
+# print(result)
+
+# with recurssion
+---------------------------------------------------------------------
+number = 5
+factorial=1
+
+if number<0:
+    print("no fact")
+elif number==0:
+    print("1")
+else:
+    for i in range(1,number+1):
+        factorial*=i
+print(factorial)
