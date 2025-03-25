@@ -1,0 +1,21 @@
+# Get user input
+num = int(input("Enter a number: "))
+
+# Convert number to string to count digits
+num_digits = len(str(num))
+
+# Initialize sum variable
+sum_of_digits = 0
+temp = num  # Store original number
+
+# Calculate the sum of digits raised to the power of num_digits
+while temp > 0:
+    digit = temp % 10  # Get the last digit
+    sum_of_digits += digit ** num_digits  # Add (digit^num_digits) to sum
+    temp //= 10  # Remove last digit
+
+# Check if Armstrong number
+if sum_of_digits == num:
+    print(f"{num} is an Armstrong number.")
+else:
+    print(f"{num} is NOT an Armstrong number.")
