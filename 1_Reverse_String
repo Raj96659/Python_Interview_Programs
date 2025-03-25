@@ -10,3 +10,17 @@ user_input = input("Enter a string to reverse: ")
 # Call the function and display the reversed string
 reversed_string = reverse_string(user_input)
 print("Reversed string:", reversed_string)
+
+
+# Without Inbuild Function
+
+def reversed_string_without_indexing(s):
+    reversed_str = ""
+    for char in s:
+        reversed_str = char + reversed_str
+    return reversed_str
+
+input_str = input("Enter the string :")
+
+function_calling_without_indexing=reversed_string_without_indexing(input_str)
+print("Reversed String without indexing : ",function_calling_without_indexing)
