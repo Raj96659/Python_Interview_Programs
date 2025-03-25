@@ -1,0 +1,17 @@
+# Get user input: list of numbers
+numbers = list(map(int, input("Enter numbers separated by spaces: ").split()))
+
+# Check if the list is empty
+if not numbers:
+    print("The list is empty. Please enter some numbers.")
+else:
+    # Assume the first element is the minimum
+    min_element = numbers[0]
+
+    # Iterate through the list to find the minimum
+    for num in numbers:
+        if num < min_element:
+            min_element = num  # Update min_element if a smaller number is found
+
+    # Print the minimum number
+    print(f"The minimum element in the list is: {min_element}")
