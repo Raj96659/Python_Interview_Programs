@@ -1,0 +1,26 @@
+
+
+# Python Program to Check Anagrams
+
+def are_anagrams(str1, str2):
+    return sorted(str1.lower()) == sorted(str2.lower())
+
+# Example usage
+word1 = input("Enter first word: ")
+word2 = input("Enter second word: ")
+
+if are_anagrams(word1, word2):
+    print("The words are anagrams!")
+else:
+    print("The words are NOT anagrams!")
+
+______________________________________________________________________________________________________
+
+
+What happens inside the function?
+
+str1.lower() & str2.lower() → Converts both words to lowercase (to ignore case differences).
+
+sorted(str1.lower()) & sorted(str2.lower()) → Sorts the letters of both words alphabetically.
+
+Comparison (==) → If both sorted versions are the same, the words are anagrams.
