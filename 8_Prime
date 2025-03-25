@@ -1,0 +1,119 @@
+def is_prime(n):
+    if n < 2:
+        return False  # Numbers less than 2 are not prime
+
+    for i in range(2, int(n ** 0.5) + 1):  # Check divisibility up to √n
+        if n % i == 0:
+            return False  # Not a prime number
+
+    return True  # Prime number
+
+
+# Get user input
+num = int(input("Enter a number: "))
+
+# Check and print result
+if is_prime(num):
+    print(f"{num} is a prime number.")
+else:
+    print(f"{num} is NOT a prime number.")
+
+
+
+______________________________________________________________________________________________
+______________________________________________________________________________________________
+
+Explanation of the Code
+The function is_prime(n) checks if a given number n is prime.
+
+Step-by-Step Breakdown
+Base Case Check:
+
+If n < 2, return False because numbers less than 2 are not prime.
+
+Loop to Check Divisibility:
+
+Iterate from 2 to √n (square root of n).
+
+If n is divisible by any number in this range, it is not prime.
+
+If no divisors are found, the number is prime.
+
+User Input & Output:
+
+Takes input from the user.
+
+Calls the is_prime function to check for primality.
+
+Prints the appropriate message.
+
+Why Check Up to √n?
+Checking divisibility up to √n is an optimization to reduce computation.
+
+A non-prime number n will always have at least one factor ≤ √n.
+
+If n = a × b, then either a or b must be ≤ √n, otherwise their product would be larger than n.
+
+For example:
+
+If n = 36, then its factors are:
+
+(2,18), (3,12), (4,9), (6,6)
+
+After √36 = 6, the factors just repeat in reverse.
+
+So, we only need to check up to 6.
+
+This optimization significantly reduces the number of iterations.
+
+Dry Run Example
+Input: n = 29
+Step 1: is_prime(29)
+
+29 >= 2, proceed.
+
+Step 2: Loop from 2 to √29 ≈ 5.38 (integer part 5)
+
+Check 29 % 2 ≠ 0
+
+Check 29 % 3 ≠ 0
+
+Check 29 % 4 ≠ 0
+
+Check 29 % 5 ≠ 0
+
+No factors found → 29 is prime.
+
+Output:
+csharp
+Copy
+Edit
+29 is a prime number.
+Input: n = 30
+Step 1: is_prime(30)
+
+30 >= 2, proceed.
+
+Step 2: Loop from 2 to √30 ≈ 5.47 (integer part 5)
+
+30 % 2 == 0 → Not prime, return False.
+
+Output:
+csharp
+Copy
+Edit
+30 is NOT a prime number.
+Final Summary
+The loop only checks up to √n, reducing computations.
+
+If a number is divisible within this range, it's not prime.
+
+Otherwise, it is prime.
+
+
+
+
+
+
+
+link : https://chatgpt.com/share/67e276a8-683c-800b-af9c-b9f1cea1800a
