@@ -1,0 +1,13 @@
+def sec_largest(num):
+    if len(num)<2:
+        return None
+    else:
+        num_list = sorted(num,reverse=True)
+        return num_list[1]
+
+list1 = list(map(int, input("Enter numbers separated by spaces: ").split()))
+result = sec_largest(list1)
+if result is not None:
+    print(result)
+else:
+    print("Less than two element")
