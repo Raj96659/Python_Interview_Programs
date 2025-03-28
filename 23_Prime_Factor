@@ -1,0 +1,12 @@
+def is_prime_factor(number,potential_factor):
+    if number<=1 or potential_factor<=1:
+        return False
+    else:
+        return number % potential_factor == 0
+
+number = 15
+potential_factor = 5
+if is_prime_factor(number,potential_factor):
+    print("Yes")
+else:
+    print("No")
