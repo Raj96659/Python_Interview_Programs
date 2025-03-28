@@ -1,0 +1,7 @@
+def word_count(sentence):
+    word = sentence.split()
+    return len(word)
+
+intt = input("Enter the sentence")
+result = word_count(intt)
+print(result)
