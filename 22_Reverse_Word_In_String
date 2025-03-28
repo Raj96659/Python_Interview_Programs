@@ -1,0 +1,9 @@
+def rev_word(input_string):
+    word = input_string.split()
+    rev_words = word[::-1]
+    rev_string = " ".join(rev_words)
+    return rev_string
+
+intt = input("Enter the string : ")
+result = rev_word(intt)
+print(result)
