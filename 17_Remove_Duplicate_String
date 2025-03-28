@@ -1,0 +1,17 @@
+def remove_duplicates(string):
+    seen = set()  # To keep track of unique characters
+    result = ""  # To store the final string without duplicates
+    
+    for char in string:
+        if char not in seen:  # If character is not seen before
+            result += char  # Add character to result
+            seen.add(char)  # Mark character as seen
+    
+    return result
+
+# Example usage
+input_str = "programming"
+result = remove_duplicates(input_str)
+print("String after removing duplicates:", result)
+
+______________________________________________________________________________________________________
