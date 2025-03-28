@@ -1,0 +1,20 @@
+def is_perfect_number(n):
+    if n < 1:
+        return False  # A perfect number must be positive
+    
+    sum_of_divisors = 0  # Initialize sum
+
+    for i in range(1, n):  # Loop through numbers from 1 to (n-1)
+        if n % i == 0:  # Check if 'i' is a divisor of 'n'
+            sum_of_divisors += i  # Add divisor to sum
+
+    return sum_of_divisors == n  # Check if sum of divisors equals the number
+
+# Get user input
+num = int(input("Enter a number: "))
+
+# Check and print result
+if is_perfect_number(num):
+    print(f"{num} is a Perfect Number.")
+else:
+    print(f"{num} is NOT a Perfect Number.")
